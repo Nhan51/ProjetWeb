@@ -10,10 +10,10 @@ export default function Login({ onReset }) {
 
   const handleSubmitClick = (event) => {
     event.preventDefault();
-    console.log("username = "+username.value+", password = "+password.value)
-    if(username == "" ){//marche pas
+    console.log("Submit button clicked")
+    if(!username.value.trim() || !password.value.trim()) {
       console.log(event)
-      alert("Veillez remplir tous les champs");
+      alert("Veuillez remplir tous les champs");
     }
     return;
   };
